@@ -12,6 +12,21 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("index.jsp");
+        requestDispatcher.forward(req, resp);
+    }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        String name = req.getParameter("name");
+        String password = req.getParameter("pass");
+
+        if(name.equals("root") && password.equals("pass")){
+            //пока нет базы логинов и паролей, заходим автоматом
+            resp.sendRedirect(req.getContextPath() + "views/messenger.jsp");
+        } else{
+            PrintWriter pw = resp.getWriter();
+            pw.println("Wrong login / password!");
+        }
     }
 }

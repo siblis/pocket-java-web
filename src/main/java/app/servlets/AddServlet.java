@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 
 public class AddServlet extends HttpServlet {
@@ -24,6 +25,7 @@ public class AddServlet extends HttpServlet {
         String name = req.getParameter("name");
         String password = req.getParameter("pass");
         String email = req.getParameter("email");
+
         User user = new User(name, password, email);
         Model model = Model.getInstance();
         model.add(user);
