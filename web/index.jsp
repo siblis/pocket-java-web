@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-      <link rel="stylesheet" href="styles/w3.css">
+
     <title>pocket Messenger web</title>
   </head>
   <body>
@@ -21,7 +21,7 @@
 
   <div align="center">
 
-      <form action="messenger" method="post">
+      <form action="index" method="post" class="login">
           <label> Name:
               <input type="text" name="name"><br />
           </label>
@@ -36,7 +36,7 @@
       <div>  <!-- buttons holder -->
 
 
-          <button onclick="location.href='/list'">Список пользователей</button> <!-- эту кнопку нужно будет убрать, список реализовать в окне мессенджера-->
+          <%--<button onclick="location.href='/list'">Список пользователей</button> <!-- эту кнопку нужно будет убрать, список реализовать в окне мессенджера-->--%>
           <button onclick="location.href='/add'">Зарегистрироваться</button>
       </div>
 

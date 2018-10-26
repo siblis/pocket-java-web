@@ -14,15 +14,6 @@
     </servlet-mapping>
     
     <servlet>
-        <servlet-name>list</servlet-name>
-        <servlet-class>app.servlets.ListServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>list</servlet-name>
-        <url-pattern>/list</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>login</servlet-name>
         <servlet-class>app.servlets.LoginServlet</servlet-class>
     </servlet>

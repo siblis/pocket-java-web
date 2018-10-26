@@ -1,0 +1,61 @@
+body {
+    font:12px arial;
+    color: #222;
+    text-align:center;
+    /*padding:35px;*/
+}
+
+input { font:12px arial; }
+
+#wrapper, #loginform {
+    float: right;
+    width: 80%;
+    height: 91%;
+    margin:0 auto;
+    /*padding-bottom:25px;*/
+    background:#EBF4FB;
+    border:1px solid #ACD8F0;
+}
+
+#chatbox {
+    text-align:center;
+    margin:0 auto;
+    margin-bottom:25px;
+    /*padding:10px;*/
+    background:#fff;
+    height:75%;
+    width:90%;
+    border:1px solid #ACD8F0;
+    overflow:auto; }
+
+#usermsg {
+
+    width:100%;
+    /*padding:10px;*/
+    /*border:1px solid #ACD8F0; */
+}
+
+#msg {
+    width: 95%;
+}
+
+#userList {
+    float: right;
+    background:#ACD8F0;
+    width:19%;
+    height: 87%;
+    overflow:auto;
+    text-align:center;
+    position: absolute;
+    top: auto;
+    padding-top: 25px;
+}
+
+#submit { width: 90px; }
+
+.error { color: #ff0000; }
+
+.welcome { float:left; }
+
+.logout { float:right; }
+
