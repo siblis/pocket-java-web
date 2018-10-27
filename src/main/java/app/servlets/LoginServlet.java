@@ -22,7 +22,8 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("pass");
 
         if(name.equals("root") && password.equals("pass")){
-            //пока нет базы логинов и паролей, заходим автоматом
+
+            req.getSession().setAttribute("name", name);
             resp.sendRedirect(req.getContextPath() + "views/messenger.jsp");
         } else{
             PrintWriter pw = resp.getWriter();
