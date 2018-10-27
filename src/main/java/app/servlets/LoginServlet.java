@@ -23,11 +23,12 @@ public class LoginServlet extends HttpServlet {
 
         if(name.equals("root") && password.equals("pass")){
 
-            req.getSession().setAttribute("name", name);
+            req.getSession().setAttribute("username", name);
             resp.sendRedirect(req.getContextPath() + "views/messenger.jsp");
         } else{
             PrintWriter pw = resp.getWriter();
             pw.println("Wrong login / password!");
+
         }
     }
 }

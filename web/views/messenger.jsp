@@ -13,7 +13,7 @@
 </head>
 <body>
 <%
-    out.println("<h3> Welcome, " + request.getSession().getAttribute("name") + "!</h3>");
+    out.println("<h3> Welcome, " + request.getSession().getAttribute("username") + "</h3>");
 %>
 
 <div>
