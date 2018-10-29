@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: anna
   Date: 17.10.2018
@@ -8,18 +8,41 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Окно чата</title>
+    <title>PocketMSG</title>
+
 </head>
 <body>
-Вы в главном окне
+<%
+    out.println("<h3> Welcome, " + request.getSession().getAttribute("username") + "</h3>");
+%>
 
-    <div align="bottom">
-        <form action="messenger" method="post">
-            <p>Message</p>
-            <p><textarea name="" placeholder="Print your message here" id="msg" cols="50" rows="5"></textarea></p>
-            <p><input type="submit" value="SEND"></p>
-        </form>
+<div>
+    <style>
+        <%@include file="styles/w3.css"%>
+    </style>
+
+    <div id="wrapper">
+
+        <div id="chatbox"></div>
+
+        <div id="usermsg">
+            <form method="post">
+                <p><textarea name="text" placeholder="Print your message here" id="msg" cols="50" rows="5"></textarea></p>
+                <p><input id="submit" type="submit" value="SEND"></p>
+            </form>
+        </div>
     </div>
+
+    <div id="userList">
+        <form>
+            <label>
+                <input type="text" name="email"><br />
+                <button type="submit">Add new user</button>
+            </label>
+        </form>
+
+    </div>
+</div>
 
 </body>
 </html>
