@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static app.entities.User.me;
+
 
 public class MainServlet extends HttpServlet {
 
@@ -22,17 +24,19 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
+        req.setCharacterEncoding ("UTF-8");
+
         if (req.getParameter("sendMessage") != null) {
-            System.out.println("msg sent");
+
             String content = req.getParameter("msg");
             Messages.text.add(content);
 
         } else if (req.getParameter("addUser") != null) {
-            System.out.println("user added");
+
             String name = req.getParameter("addUser");
             if (!name.isEmpty()) {
                 User user = new User(name);
-                User.contacts.add(user);
+                me.contacts.add(user);
             }
         } else {
             System.out.println("Something else happened");

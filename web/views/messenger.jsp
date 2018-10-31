@@ -1,20 +1,23 @@
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="app.entities.Messages" %>
-<%@ page import="app.entities.User" %><%--
+<%@ page import="app.entities.User" %>
+<%@ page import="static app.entities.User.me" %><%--
   Created by IntelliJ IDEA.
   User: anna
   Date: 17.10.2018
   Time: 20:04
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<fmt:requestEncoding value="UTF-8" />
 <html>
 <head>
     <title>PocketMSG</title>
 
 </head>
 <body>
+<div >
+    <a href="index" id="logout">logout</a>
+</div>
 <%
     out.println("<h3> Welcome, " + request.getSession().getAttribute("username") + "</h3>");
 %>
@@ -53,7 +56,7 @@
             </label>
             <br>
             <%
-            for (User user : User.contacts) {
+            for (User user : me.contacts) {
                 if(user != null) out.println(user.getName());
             %>
             <br>
