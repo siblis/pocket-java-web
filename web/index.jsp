@@ -21,7 +21,7 @@
 
   <div align="center">
 
-      <form action="index" method="post" class="login">
+      <form action="index" method="post">
           <label> Name:
               <input type="text" name="name"><br />
           </label>

@@ -1,4 +1,7 @@
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="app.entities.Messages" %>
+<%@ page import="app.entities.User" %><%--
   Created by IntelliJ IDEA.
   User: anna
   Date: 17.10.2018
@@ -23,22 +26,41 @@
 
     <div id="wrapper">
 
-        <div id="chatbox"></div>
+        <div id="chatbox">
+            <%
+                    for (String s : Messages.text) {
+                        if(s != null) out.println(s);
+            %>
+            <br>
+            <%
+                    }
+            %>
+        </div>
 
         <div id="usermsg">
-            <form method="post">
-                <p><textarea name="text" placeholder="Print your message here" id="msg" cols="50" rows="5"></textarea></p>
-                <p><input id="submit" type="submit" value="SEND"></p>
+            <form method="post" action="${pageContext.request.contextPath}/messenger">
+                <p><textarea name="msg" placeholder="Print your message here" id="msg" cols="50" rows="5"></textarea></p>
+                <p><input name="sendMessage" type="submit" value="SEND"></p>
             </form>
         </div>
     </div>
 
     <div id="userList">
-        <form>
+        <form method="post" action="${pageContext.request.contextPath}/messenger">
             <label>
-                <input type="text" name="email"><br />
+                <input type="text" name="addUser"><br />
                 <button type="submit">Add new user</button>
             </label>
+            <br>
+            <%
+            for (User user : User.contacts) {
+                if(user != null) out.println(user.getName());
+            %>
+            <br>
+            <%
+                }
+            %>
+
         </form>
 
     </div>

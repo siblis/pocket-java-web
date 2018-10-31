@@ -7,4 +7,17 @@ public class Message {
     private String toUserName;
     private String content;
     private Date date;
+
+    public Message(){
+
+    }
+
+    public Message(String content){
+        this.content = content;
+
+    }
+
+    public String getContent() {
+        return content;
+    }
 }
