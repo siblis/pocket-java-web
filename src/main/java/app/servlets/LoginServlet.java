@@ -1,5 +1,7 @@
 package app.servlets;
 
+import app.entities.User;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,8 +26,11 @@ public class LoginServlet extends HttpServlet {
         if(name.equals("root") && password.equals("pass")){
 
             req.getSession().setAttribute("username", name);
+            User.me = new User(name, password);
             resp.sendRedirect(req.getContextPath() + "messenger");
+
         } else{
+            //нужно выводить сообщение о неверном логине/пароле в каком-нибудь диве в index.jsp
             PrintWriter pw = resp.getWriter();
             pw.println("Wrong login / password!");
 

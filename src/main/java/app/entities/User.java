@@ -9,8 +9,9 @@ public class User {
     private String password;
     private String email;
     private int id;
+    public static User me; //мб нужно сделать синглетон
 
-    public static List<User> contacts = new ArrayList<>();
+    public List<User> contacts = new ArrayList<>();
 
     public User(String name, String password, String email) {
         this.name = name;
@@ -18,11 +19,16 @@ public class User {
         this.email = email;
     }
 
-    public User() {
+    public User(String name, String password) {
+        this.name = name;
+        this.password = password;
     }
 
     public User(String name){
         this.name = name;
+    }
+
+    public User() {
     }
 
     public String getName() {

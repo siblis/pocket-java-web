@@ -40,6 +40,10 @@
           <button onclick="location.href='/add'">Зарегистрироваться</button>
       </div>
 
+      <div>
+
+      </div>
+
   </div>
   </body>
 </html>
