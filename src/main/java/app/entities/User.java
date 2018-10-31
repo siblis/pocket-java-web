@@ -1,10 +1,16 @@
 package app.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
     private String name;
     private String password;
     private String email;
+    private int id;
+
+    public static List<User> contacts = new ArrayList<>();
 
     public User(String name, String password, String email) {
         this.name = name;
@@ -13,6 +19,10 @@ public class User {
     }
 
     public User() {
+    }
+
+    public User(String name){
+        this.name = name;
     }
 
     public String getName() {
