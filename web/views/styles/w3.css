@@ -18,7 +18,7 @@ input { font:12px arial; }
 }
 
 #chatbox {
-    text-align:center;
+    text-align:left;
     margin:0 auto;
     margin-bottom:25px;
     /*padding:10px;*/
@@ -51,11 +51,15 @@ input { font:12px arial; }
     padding-top: 25px;
 }
 
-#submit { width: 90px; }
+#sendMessage { width: 90px; }
 
 .error { color: #ff0000; }
 
 .welcome { float:left; }
 
-.logout { float:right; }
+#logout {
+    float:right;
+    position: absolute;
+    right:25px;
+}
 

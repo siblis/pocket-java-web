@@ -21,7 +21,7 @@
 
   <div align="center">
 
-      <form action="index" method="post" class="login">
+      <form action="index" method="post">
           <label> Name:
               <input type="text" name="name"><br />
           </label>
@@ -38,6 +38,10 @@
 
           <%--<button onclick="location.href='/list'">Список пользователей</button> <!-- эту кнопку нужно будет убрать, список реализовать в окне мессенджера-->--%>
           <button onclick="location.href='/add'">Зарегистрироваться</button>
+      </div>
+
+      <div>
+
       </div>
 
   </div>
