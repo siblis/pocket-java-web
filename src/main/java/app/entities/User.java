@@ -1,7 +1,6 @@
 package app.entities;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class User {
 
