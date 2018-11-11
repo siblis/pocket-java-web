@@ -1,0 +1,150 @@
+/*---------------------BEGIN LOGIN WINDOW-------------------------------*/
+.login_380_600 {
+    width: 380px;
+    height: 600px;
+    margin: auto;
+    background-image: url(images/clement-h-544786-unsplash.png);
+    position: relative;
+    font-family: Roboto;
+    z-index: 1;
+}
+
+.restangle_2_1 {
+    width: 280px;
+    height: 392px;
+    margin: auto;
+    background-image: url(images/Rectangle.png);
+    position: relative;
+    z-index: 10;
+}
+
+.ellipse_big {
+    margin: auto;
+    width: 300px;
+    height: 120px;
+    position: absolute;
+    background-image: url(images/Ellipse_big.png);
+    background-repeat: no-repeat;
+    top: 0px;
+    left: 38px;
+    z-index: 100;
+}
+
+.pocket_messenger {
+    position: absolute;
+    width: 100%;
+    font-size: 32px;
+    color: #004F70;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: center;
+    top: 10px;
+    z-index: 110;
+}
+
+.for_geeks_by_geeks {
+    position: absolute;
+    width: 100%;
+    font-size: 11px;
+    color: #004F70;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    top: 45px;
+    z-index: 110;
+}
+
+.ellipse_small {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(images/Ellipse_small.png);
+    z-index: 110;
+    top: 64px;
+    left: 165px;
+}
+
+/*BEGIN OF FORGOT PASSWORD*/
+.forgot_pass {
+    position: absolute;
+    left: 21%;
+    top: 47%;
+    z-index: 300;
+}
+
+.forgot_pass a {
+    color: #ffe684;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.forgot_pass a:hover {
+    text-decoration: underline;
+}
+
+/*END OF FORGOT PASWORD*/
+
+/*BEGIN OF FORM*/
+input {
+    display: block;
+    position: absolute;
+    left: 20%;
+    border: 1px #ffe684 solid;
+    border-radius: 8px;
+    background-color: #b8c5cb;
+    width: 57%;
+    z-index: 200;
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 10px;
+    color: #111111;
+}
+/*END OF FORM*/
+
+/*BEGIN OF FORM'S FIELDS*/
+#log_in {
+    background-color: #ffe684;
+    color: #004f70;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-style: normal;
+    width: 60%;
+    top: 52%;
+    height: 7%;
+}
+
+#mail,
+#pass {
+    height: 6.5%;
+}
+
+#mail {
+    top: 28%;
+}
+
+#pass {
+    top: 39%;
+}
+
+/*END OF FORM'S FIELDS*/
+
+/*BEGIN OF REGISTRATION*/
+.registration {
+    position: absolute;
+    left: 21%;
+    top: 61%;
+    z-index: 300;
+    font-size: 12px;
+    color: #e2e2e2;
+}
+
+.registration a {
+    color: #ffe684;
+    text-decoration: none;
+}
+
+.registration a:hover {
+    text-decoration: underline;
+}
+/*END OF REGISTRATION*/
+/*---------------------END LOGIN WINDOW---------------------------------*/
