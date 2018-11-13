@@ -27,19 +27,12 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        UserSerializer serializer = new UserSerializer(User.class);
-        ObjectMapper om = new ObjectMapper();
-        SimpleModule module = new SimpleModule("UserSerializer", new Version(2, 1, 3, null, null, null));
-        module.addSerializer(User.class, serializer);
-        om.registerModule(module);
-
         me = new User();
         me.setName(req.getParameter("name"));
         me.setPassword(req.getParameter("pass"));
 
-        String jsonString = om.writeValueAsString(me);
-        Connect con = new Connect(jsonString);
-        System.out.println(jsonString);
+        Connect con = new Connect(me.toJSON());
+//        System.out.println(me.toJSON());
 
         resp.sendRedirect(req.getContextPath() + "messenger");
 

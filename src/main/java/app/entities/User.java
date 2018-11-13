@@ -2,7 +2,9 @@ package app.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 
 import java.util.*;
 
@@ -13,6 +15,17 @@ public class User {
     private String email;
     private int id;
     public static User me;
+
+    public String toJSON() throws JsonProcessingException {
+
+        UserSerializer serializer = new UserSerializer(User.class);
+        ObjectMapper om = new ObjectMapper();
+        SimpleModule module = new SimpleModule("UserSerializer", new Version(2, 1, 3, null, null, null));
+        module.addSerializer(User.class, serializer);
+        om.registerModule(module);
+        return om.writeValueAsString(me);
+
+    }
 
     @JsonIgnore
     public List<User> contacts = new ArrayList<>();
