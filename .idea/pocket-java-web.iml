@@ -15,13 +15,5 @@
         </sourceRoots>
       </configuration>
     </facet>
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/web/WEB-INF/config/application-context.xml</file>
-          <file>file://$MODULE_DIR$/web/WEB-INF/config/mvc-config.xml</file>
-        </fileset>
-      </configuration>
-    </facet>
   </component>
 </module>

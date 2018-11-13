@@ -7,43 +7,38 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-
-    <title>pocket Messenger web</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Pocket Messenger Web</title>
+    <!-- BEGIN   Подключение файла style.css  -->
+    <link rel="stylesheet" type="text/css" href="views/styles/style.css">
+    <!-- END   Подключение файла style.css  -->
+</head>
   <body>
 
-  <header>
-      <div align="center">
-        <h2>Welcome to Pocket Messenger</h2>
-      </div>
-  </header>
+  <%--<header>--%>
+      <%--&lt;%&ndash;<div align="center">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<h2>Welcome to Pocket Messenger</h2>&ndash;%&gt;--%>
+      <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+  <%--</header>--%>
 
-  <div align="center">
-
+  <div class="login_380_600">
+      <div class="restangle_2_1"></div>
+      <div class="ellipse_big"></div>
+      <div class="pocket_messenger">Pocket Messenger</div>
+      <div class="for_geeks_by_geeks">For geeks by geeks</div>
+      <div class="ellipse_small"></div>
+      <!--BEGIN OF FORM-->
       <form action="index" method="post">
-          <label> Name:
-              <input type="text" name="name"><br />
-          </label>
-
-          <label> Password:
-              <input type="password" name="pass"><br />
-          </label>
-
-          <button type="submit">Войти</button>
+          <input id="mail" type="text" placeholder="E-mail" name="name" required>
+          <input id="pass" type="password" placeholder="Пароль" name = "pass" required>
+          <input id="log_in" type="submit" value="Войти">
+          <div class="forgot_pass"><a href="">Забыли пароль?</a></div> <!-- форма восстановления пароля -->
       </form>
-
-      <div>  <!-- buttons holder -->
-
-
-          <%--<button onclick="location.href='/list'">Список пользователей</button> <!-- эту кнопку нужно будет убрать, список реализовать в окне мессенджера-->--%>
-          <button onclick="location.href='/add'">Зарегистрироваться</button>
-      </div>
-
-      <div>
-
-      </div>
-
+      <!--END OF FORM-->
+      <!--BEGIN OF REGISTRATION-->
+      <div class="registration">Нет аккаунта?&nbsp;<a href="/add">Регистрация</a></div>
+      <!--END OF REGISTRATION-->
   </div>
   </body>
 </html>

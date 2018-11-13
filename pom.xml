@@ -24,7 +24,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compile.source>1.9</maven.compile.source>
         <maven.compile.target>1.9</maven.compile.target>
+        <spring-framework.version>4.2.4.RELEASE</spring-framework.version>
     </properties>
+
+    <dependencyManagement>
+        <!--all spring dependencies -->
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring-framework.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
 
@@ -55,6 +69,37 @@
             <artifactId>spring-test</artifactId>
             <version>4.3.13.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.9.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.websocket/javax.websocket-api -->
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+        </dependency>
+
 
     </dependencies>
 </project>

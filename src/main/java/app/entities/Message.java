@@ -17,6 +17,12 @@ public class Message {
 
     }
 
+    public Message(User receiver, String content, Date date) {
+        this.receiver = receiver;
+        this.content = content;
+        this.date = date;
+    }
+
     public String getContent() {
         return content;
     }
