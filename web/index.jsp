@@ -16,11 +16,11 @@
 </head>
   <body>
 
-  <header>
-      <div align="center">
-        <h2>Welcome to Pocket Messenger</h2>
-      </div>
-  </header>
+  <%--<header>--%>
+      <%--&lt;%&ndash;<div align="center">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<h2>Welcome to Pocket Messenger</h2>&ndash;%&gt;--%>
+      <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+  <%--</header>--%>
 
   <div class="login_380_600">
       <div class="restangle_2_1"></div>
@@ -32,7 +32,7 @@
       <form action="index" method="post">
           <input id="mail" type="text" placeholder="E-mail" name="name" required>
           <input id="pass" type="password" placeholder="Пароль" name = "pass" required>
-          <input id="log_in"type="submit" value="Войти">
+          <input id="log_in" type="submit" value="Войти">
           <div class="forgot_pass"><a href="">Забыли пароль?</a></div> <!-- форма восстановления пароля -->
       </form>
       <!--END OF FORM-->

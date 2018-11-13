@@ -3,8 +3,8 @@ package app.entities;
 import java.util.Date;
 
 public class Message {
-    private String fromUserName;
-    private String toUserName;
+    private User sender;
+    private User receiver;
     private String content;
     private Date date;
 
@@ -15,6 +15,12 @@ public class Message {
     public Message(String content){
         this.content = content;
 
+    }
+
+    public Message(User receiver, String content, Date date) {
+        this.receiver = receiver;
+        this.content = content;
+        this.date = date;
     }
 
     public String getContent() {
