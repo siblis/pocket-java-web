@@ -19,7 +19,7 @@
     <a href="index" id="logout">logout</a>
 </div>
 <%
-    out.println("<h3> Welcome, " + request.getSession().getAttribute("username") + "</h3>");
+    out.println("<h3> Welcome, " + me.getName() + "</h3>");
 %>
 
 <div>
