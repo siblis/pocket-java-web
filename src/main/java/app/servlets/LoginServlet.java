@@ -1,5 +1,4 @@
-//written by Ann
-//edited by Artem
+//written by Ann & Artem
 
 package app.servlets;
 
@@ -30,7 +29,7 @@ public class LoginServlet extends HttpServlet {
         me.setPassword(req.getParameter("pass"));
 
         try {
-            respAuth = Connect.authorization(me.toJSON());
+            respAuth = Connect.connect(me.toJSON(), Connect.PUT, Connect.AUTH_PATH);
             if (ResponseAuth.resp(respAuth).equals("OK"))
                 resp.sendRedirect(req.getContextPath() + "messenger");
             else {
