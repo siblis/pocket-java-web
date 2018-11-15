@@ -64,6 +64,18 @@
     left: 165px;
 }
 
+.error_msg {
+    position: absolute;
+    width: 100%;
+    font-size: 12px;
+    color: #FF0000;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    top: 22%;
+    z-index: 110;
+}
+
 /*BEGIN OF FORGOT PASSWORD*/
 .forgot_pass {
     position: absolute;
@@ -127,7 +139,6 @@ input {
 }
 
 /*END OF FORM'S FIELDS*/
-
 /*BEGIN OF REGISTRATION*/
 .registration {
     position: absolute;
