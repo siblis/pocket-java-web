@@ -30,9 +30,12 @@
       <div class="ellipse_small"></div>
       <!--BEGIN OF FORM-->
       <form action="index" method="post">
-          <input id="mail" type="text" placeholder="E-mail" name="name" required>
+          <input id="mail" type="text" placeholder="Имя пользователя" name="name" required>
           <input id="pass" type="password" placeholder="Пароль" name = "pass" required>
           <input id="log_in" type="submit" value="Войти">
+          <div class="error_msg"><%if (request.getAttribute("error_msg") != null) {
+              out.println("<p>" + request.getAttribute("error_msg") + "</p>");
+          }%></div>
           <div class="forgot_pass"><a href="">Забыли пароль?</a></div> <!-- форма восстановления пароля -->
       </form>
       <!--END OF FORM-->

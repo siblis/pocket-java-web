@@ -1,13 +1,10 @@
-//written by Ann
+//written by Ann & Artem
+
 package app.servlets;
 
 import app.entities.User;
-import app.entities.UserSerializer;
+import app.responseProcessing.ResponseAuth;
 import app.server.Connect;
-import com.fasterxml.jackson.core.Version;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -26,15 +23,23 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-
+        String respAuth;
         me = new User();
         me.setName(req.getParameter("name"));
         me.setPassword(req.getParameter("pass"));
 
-        Connect con = new Connect(me.toJSON());
-//        System.out.println(me.toJSON());
+        try {
+            respAuth = Connect.connect(me.toJSON(), Connect.PUT, Connect.AUTH_PATH);
+            if (ResponseAuth.resp(respAuth).equals("OK"))
+                resp.sendRedirect(req.getContextPath() + "messenger");
+            else {
+                req.setAttribute("error_msg", ResponseAuth.resp(respAuth));
+                this.getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        resp.sendRedirect(req.getContextPath() + "messenger");
-
+        //System.out.println(respAuth);
     }
 }
