@@ -57,7 +57,7 @@ main {
     position: absolute;
     top: 86.388px;
     left: 388.27px;
-    background-image: url(images/Ellipse_big.png);
+    background-image: url(images/ellipse_big.png);
     background-repeat: no-repeat;
     background-size: 441.34288948px 441.34288948px;
     background-position: center -246.31578947px;
@@ -102,6 +102,7 @@ main {
     top: 86.388px;
     left: 550.61857185px;
     top: 195px;
+    box-shadow: 0px 2px 5px #999;
 }
 .restangle_2_3 input {
     display: block;
