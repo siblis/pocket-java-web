@@ -12,43 +12,43 @@
 </head>
 <body>
 
+<div>
+    <%
+        if(request.getAttribute("userName") != null){
+            out.println("<p> User " + request.getAttribute("userName") + " added!</p>");
+        }
+    %>
+</div>
+<div align="center">
     <div>
-        <%
-            if(request.getAttribute("userName") != null){
-                out.println("<p> User " + request.getAttribute("userName") + " added!</p>");
-            }
-        %>
-    </div>
-    <div align="center">
-        <div>
-            <h2>ADD USER</h2>
-        </div>
-
-        <form method="post">
-            <label> Name:
-                <input type="text" name="name"><br />
-            </label>
-
-            <label> Password:
-                <input type="password" name="pass"><br />
-            </label>
-
-            <label> Password confirmation:
-                <input type="password" name="pass"><br />
-            </label>
-
-            <label> e-mail:
-                <input type="text" name="email"><br />
-            </label>
-
-            <button type="submit">Submit</button>
-        </form>
-
+        <h2>ADD USER</h2>
     </div>
 
-    <div align="center">
-        <button onclick="location.href='/'">Cancel</button>
-    </div>
+    <form method="post">
+        <label> Name:
+            <input type="text" name="name"><br />
+        </label>
+
+        <label> Password:
+            <input type="password" name="pass"><br />
+        </label>
+
+        <label> Password confirmation:
+            <input type="password" name="pass"><br />
+        </label>
+
+        <label> e-mail:
+            <input type="text" name="email"><br />
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+
+<div align="center">
+    <button onclick="location.href='/'">Cancel</button>
+</div>
 
 </body>
 </html>
