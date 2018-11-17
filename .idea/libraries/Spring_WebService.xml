@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Spring WebService" type="spring-ws">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../springfox-spring-web-2.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
