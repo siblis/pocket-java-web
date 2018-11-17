@@ -1,54 +1,64 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: anna
-  Date: 15.10.2018
-  Time: 21:54
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+Created by Pavel_Khaperskiy
+*/--%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Add new user</title>
 </head>
 <body>
 
+<div>
+    <%
+        if(request.getAttribute("userName") != null){
+            out.println("<p> User " + request.getAttribute("userName") + " added!</p>");
+        }
+    %>
+</div>
+<div align="center">
     <div>
-        <%
-            if(request.getAttribute("userName") != null){
-                out.println("<p> User " + request.getAttribute("userName") + " added!</p>");
-            }
-        %>
+        <h2>ADD USER</h2>
     </div>
-    <div align="center">
-        <div>
-            <h2>ADD USER</h2>
-        </div>
-
-        <form method="post">
-            <label> Name:
-                <input type="text" name="name"><br />
+    <%--
+    //TODO: Добавил проверку на валидность данных. Но возможно этот пункт можно улучшить. Хапёрский Павел.
+    --%>
+    <form method="post">
+        <p>
+            <label>
+                <input type="text" size="40"  placeholder="Имя" title="Введите имя." name="name" required>
             </label>
-
-            <label> Password:
-                <input type="password" name="pass"><br />
+        </p>
+        <p>
+            <label>
+                <input type="email" size="40" name="email" placeholder="Введите E-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required/>
             </label>
-
-            <label> Password confirmation:
-                <input type="password" name="pass"><br />
+        </p>
+        <p>
+            <label>
+                <input type="password" size="40"  placeholder="Введите пароль" title="Введите пароль." name = "pass" required>
             </label>
-
-            <label> e-mail:
-                <input type="text" name="email"><br />
+        </p>
+        <p>
+            <label>
+                <input type="password" size="40" placeholder="Введите пароль повторно" title="Введите пароль повторно." name = "pass" required>
             </label>
+        </p>
+        <p>
+            <label>
+                <button type="submit">Submit</button>
+            </label>
+            <label>
+                <button onclick="location.href='/'">Отмена</button>
+            </label>
+        </p>
+    </form>
+    <p>
 
-            <button type="submit">Submit</button>
-        </form>
+    </p>
+</div>
 
-    </div>
-
-    <div align="center">
-        <button onclick="location.href='/'">Cancel</button>
-    </div>
+<div align="center">
+</div>
 
 </body>
 </html>
