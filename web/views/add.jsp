@@ -22,28 +22,39 @@
     <%--
     //TODO: Добавил проверку на валидность данных. Но возможно этот пункт можно улучшить. Хапёрский Павел.
     --%>
-    <form action="index" method="post">
-        <p>
-            <input id="name" type="text" size="40" charset="UTF-8" placeholder="Имя" title="Введите имя." name="name" required pattern="[0-9a-zA-Zа-яА-ЯёЁ.,\- ]+">
-        </p>
-        <p>
-            <input type="email" size="40" charset="UTF-8" name="email" placeholder="Введите E-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="Введите электронный адрес(email)" required/>
-        </p>
-        <p>
-            <input type="password" size="40" charset="UTF-8" placeholder="Введите пароль" title="Введите пароль." name = "pass" required>
-        </p>
-        <p>
-            <input id="pass" charset="UTF-8" type="password" size="40" placeholder="Введите пароль повторно" title="Введите пароль повторно." name = "pass" required>
-        </p>
-
+    <form method="post">
         <p>
             <label>
-                <button type="submit">Подтверждение</button>
+                <input type="text" size="40"  placeholder="Имя" title="Введите имя." name="name" required>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="email" size="40" name="email" placeholder="Введите E-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required/>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="password" size="40"  placeholder="Введите пароль" title="Введите пароль." name = "pass" required>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="password" size="40" placeholder="Введите пароль повторно" title="Введите пароль повторно." name = "pass" required>
+            </label>
+        </p>
+        <p>
+            <label>
+                <button type="submit">Submit</button>
+            </label>
+            <label>
                 <button onclick="location.href='/'">Отмена</button>
             </label>
         </p>
     </form>
+    <p>
 
+    </p>
 </div>
 
 <div align="center">
