@@ -4,7 +4,6 @@ import app.entities.User;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Model {
     private static Model instance = new Model();
@@ -24,6 +23,13 @@ public class Model {
     }
 
     public List<String> list(){
-        return model.stream().map(User::getName).collect(Collectors.toList());
+        List<Object> list = new ArrayList<>();
+        for (User user : model) {
+            Object name = User.getName(user);
+            list.add(name);
+        }
+//        List<String> list1 = (List<String>) list;
+//        return list1;
+        return null;
     }
 }

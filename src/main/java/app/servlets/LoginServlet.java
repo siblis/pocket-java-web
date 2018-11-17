@@ -1,5 +1,4 @@
-//written by Ann & Artem
-
+//written by Ann & Artem changes by mifendos
 package app.servlets;
 
 import app.entities.User;

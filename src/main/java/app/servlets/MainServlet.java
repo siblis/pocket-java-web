@@ -32,7 +32,7 @@ public class MainServlet extends HttpServlet {
 
             String name = req.getParameter("addUser");
             if (!name.isEmpty()) {
-                User user = new User(name);
+                User user = new User();
                 me.contacts.add(user);
             }
         } else {

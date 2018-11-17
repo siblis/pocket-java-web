@@ -99,6 +99,16 @@
             <artifactId>javax.websocket-api</artifactId>
             <version>1.1</version>
         </dependency>
+        <dependency>
+            <groupId>ru.geekbrains</groupId>
+            <artifactId>DesktopClient</artifactId>
+            <version>v.1.1.1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.0.4.Final</version>
+        </dependency>
 
 
     </dependencies>
