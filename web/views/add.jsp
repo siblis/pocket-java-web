@@ -10,37 +10,49 @@ Created by Pavel_Khaperskiy
 
 <div>
     <%
-        if(request.getAttribute("userName") != null){
+        if (request.getAttribute("userName") != null) {
             out.println("<p> User " + request.getAttribute("userName") + " added!</p>");
         }
     %>
 </div>
+<div>
+    <%
+        if (request.getAttribute("error_msg") != null) {
+            out.println("<p>" + request.getAttribute("error_msg") + "</p>");
+        }
+    %>
+</div>
+
 <div align="center">
     <div>
         <h2>ADD USER</h2>
     </div>
+
     <%--
     //TODO: Добавил проверку на валидность данных. Но возможно этот пункт можно улучшить. Хапёрский Павел.
     --%>
     <form method="post">
         <p>
             <label>
-                <input type="text" size="40"  placeholder="Имя" title="Введите имя." name="name" required>
+                <input type="text" size="40" placeholder="Имя" title="Введите имя." name="name" required>
             </label>
         </p>
         <p>
             <label>
-                <input type="email" size="40" name="email" placeholder="Введите E-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required/>
+                <input type="email" size="40" name="email" placeholder="Введите E-mail"
+                       pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required/>
             </label>
         </p>
         <p>
             <label>
-                <input type="password" size="40"  placeholder="Введите пароль" title="Введите пароль." name = "pass" required>
+                <input type="password" size="40" placeholder="Введите пароль" title="Введите пароль." name="pass"
+                       required>
             </label>
         </p>
         <p>
             <label>
-                <input type="password" size="40" placeholder="Введите пароль повторно" title="Введите пароль повторно." name = "pass" required>
+                <input type="password" size="40" placeholder="Введите пароль повторно" title="Введите пароль повторно."
+                       name="pass_confirm" required>
             </label>
         </p>
         <p>
