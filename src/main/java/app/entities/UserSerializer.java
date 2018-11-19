@@ -17,7 +17,10 @@ public class UserSerializer extends StdSerializer<User> {
     public void serialize(User user, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         jsonGenerator.writeStartObject();
         jsonGenerator.writeStringField("account_name", user.getName());
+        jsonGenerator.writeStringField("email", user.getEmail());
         jsonGenerator.writeStringField("password", user.getPassword());
         jsonGenerator.writeEndObject();
     }
+
+
 }

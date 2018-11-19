@@ -2,7 +2,8 @@
 
 package app.server;
 
-import app.responseProcessing.ResponseAuth;
+import app.server.responseProcessing.ResponseAuth;
+
 import java.io.*;
 import java.net.*;
 
@@ -32,8 +33,8 @@ public class Connect {
         System.out.println("Response code " + responseCode);
         System.out.println(connection.getResponseMessage());
 
-        //аутентификация
-        if (responseCode == 200) {
+        //получение токена после удачной регистрации или аутентификации
+        if (responseCode == 200 || responseCode == 201) {
             StringBuilder response = new StringBuilder();
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String inputLine;
@@ -44,7 +45,6 @@ public class Connect {
             System.out.println("Token: " + token);
         }
 
-        //здесь нужно добавить ветку if (responseCode == 201) для регистрации нового пользователя
         return (responseCode + " " + connection.getResponseMessage());
     }
 }
